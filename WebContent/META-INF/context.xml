@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Context path="/DB_LabJSP_12_Braderie" dcoBase="DB_LabJSP_12_Braderie" debug="5" reloadable="true" antiJARLocking="true" antiResourceLocking="true">
+
+	<Resource name="jdbc/authen"
+		auth="Container"
+		type="javax.sql.DataSource"
+		maxActive="2"
+		maxIdle="2"
+		maxWait="5000"
+		username="braderie"
+		password="afpa123"
+		driverClassName="oracle.jdbc.OracleDriver"
+		url="jdbc:oracle:thin:@localhost:1521:orcl"
+		
+	/>
+
+</Context>

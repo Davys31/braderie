@@ -1,0 +1,11 @@
+#navArt{
+	 position: absolute;
+ /* En fixant la distance avec le bas à 0, on force le contenu à être aligné vers le bas */
+ bottom: 0;
+	
+}
+
+ /*pour defifnir la largeur de cellule */
+    .form-width{
+    width:50%;
+    }

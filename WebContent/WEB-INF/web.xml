@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <description>DB_LabJSP_12_Braderie</description>
+  <display-name>DB_LabJSP_12_Braderie</display-name>
+  <welcome-file-list>
+    <welcome-file>/accueil/accueil.jspl</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>&quot;JDBC_DRIVER&quot;</param-name>
+    <param-value>&quot;oracle.jdbc.OracleDriver&quot;</param-value>
+  </context-param>
+  <context-param>
+    <param-name>&quot;JDBC_url&quot;</param-name>
+    <param-value>&quot;jdbc:oracle:thin:@localhost:1521:orcl&quot;</param-value>
+  </context-param>
+  <context-param>
+    <param-name>&quot;JDBC_LOGIN&quot;</param-name>
+    <param-value>&quot;braderie&quot;</param-value>
+  </context-param>
+  <context-param>
+    <param-name>&quot;JDBC_password&quot;</param-name>
+    <param-value>&quot;afpa123&quot;</param-value>
+  </context-param>
+  <servlet>
+    <display-name>Login</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>controleur.Controleur</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Controleur</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+ 
+  <resource-ref>
+    <res-ref-name>jdbc/authen</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+</web-app>
